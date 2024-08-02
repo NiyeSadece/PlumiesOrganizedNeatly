@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmuy08qn4hdnj"]
+
+[ext_resource type="Texture2D" uid="uid://dsmjppciso6vy" path="res://Level7.jpg" id="1_2wdkc"]
+[ext_resource type="Script" path="res://slot.gd" id="2_mibow"]
+
+[node name="Slot" type="TextureRect"]
+custom_minimum_size = Vector2(64, 64)
+texture = ExtResource("1_2wdkc")
+expand_mode = 1
+script = ExtResource("2_mibow")
+
+[node name="StatusFilter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.772549, 0.105882)
