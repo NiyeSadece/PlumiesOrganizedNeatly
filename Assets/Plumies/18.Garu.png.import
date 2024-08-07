@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnc0mj82e7xbi"
-path="res://.godot/imported/Item1.png-cf66492ce77965df0a8bac72163de29c.ctex"
+uid="uid://dmmjeuw88ibpq"
+path="res://.godot/imported/18.Garu.png-0b281fe19e4c00916fe46423269ece0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item1.png"
-dest_files=["res://.godot/imported/Item1.png-cf66492ce77965df0a8bac72163de29c.ctex"]
+source_file="res://Assets/Plumies/18.Garu.png"
+dest_files=["res://.godot/imported/18.Garu.png-0b281fe19e4c00916fe46423269ece0d.ctex"]
 
 [params]
 

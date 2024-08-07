@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj4btd6xh4du0"
-path="res://.godot/imported/7._Niye.png-eb1dc8952369c6751a9d5df4d3570334.ctex"
+uid="uid://dn6hc6qsfi05e"
+path="res://.godot/imported/Teabag.png-e5e1af5449a71bcc3d85bb3c1c217a49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/7._Niye.png"
-dest_files=["res://.godot/imported/7._Niye.png-eb1dc8952369c6751a9d5df4d3570334.ctex"]
+source_file="res://Assets/Obstacles/Teabag.png"
+dest_files=["res://.godot/imported/Teabag.png-e5e1af5449a71bcc3d85bb3c1c217a49.ctex"]
 
 [params]
 

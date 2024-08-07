@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu6umgvbq1c8f"
-path="res://.godot/imported/Item4.png-bb36020680f504d4d6a4b569558d0492.ctex"
+uid="uid://cnumemimd4dyi"
+path="res://.godot/imported/Books1.png-29d2209bd2528f59ef0f8e984599d56c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item4.png"
-dest_files=["res://.godot/imported/Item4.png-bb36020680f504d4d6a4b569558d0492.ctex"]
+source_file="res://Assets/Obstacles/Books1.png"
+dest_files=["res://.godot/imported/Books1.png-29d2209bd2528f59ef0f8e984599d56c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d22j1xme1xh4f"
-path="res://.godot/imported/Item3.png-8406a7113a8dd022d483a9832660a323.ctex"
+uid="uid://doecpke37jni5"
+path="res://.godot/imported/8.Natsu.png-b72da879ba972ed473d407a4cccb3423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item3.png"
-dest_files=["res://.godot/imported/Item3.png-8406a7113a8dd022d483a9832660a323.ctex"]
+source_file="res://Assets/Plumies/8.Natsu.png"
+dest_files=["res://.godot/imported/8.Natsu.png-b72da879ba972ed473d407a4cccb3423.ctex"]
 
 [params]
 

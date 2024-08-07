@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp73x145mxrh"
-path="res://.godot/imported/Item2.png-a2cf896e918b0ceb1a052973b4512596.ctex"
+uid="uid://cx45amqtay43h"
+path="res://.godot/imported/6.Lysander.png-c0d2a4aad87ac88edf31973121a8f9d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Item2.png"
-dest_files=["res://.godot/imported/Item2.png-a2cf896e918b0ceb1a052973b4512596.ctex"]
+source_file="res://Assets/Plumies/6.Lysander.png"
+dest_files=["res://.godot/imported/6.Lysander.png-c0d2a4aad87ac88edf31973121a8f9d2.ctex"]
 
 [params]
 

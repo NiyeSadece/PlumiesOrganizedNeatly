@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func load_item(a_ItemID : int):
-	var Icon_path = "res://Assets/" + DataHandler.item_data[str(a_ItemID)]["Name"] + ".png"
+	var Icon_path = "res://Assets/Plumies/" + DataHandler.item_data[str(a_ItemID)]["Name"] + ".png"
 	IconRect_path.texture = load(Icon_path)
 	for grid in DataHandler.item_grid_data[str(a_ItemID)]:
 		var converter_array := []
@@ -37,7 +37,7 @@ func rotate_item():
 func _snap_to(destination:Vector2):
 	var tween = get_tree().create_tween()
 	
-	if int(rotation_degrees) % 100 == 0:
+	if int(rotation_degrees) % 180 == 0:
 		destination += IconRect_path.size/2
 	else:
 		var temp_xy_switch = Vector2(IconRect_path.size.y, IconRect_path.size.x)
