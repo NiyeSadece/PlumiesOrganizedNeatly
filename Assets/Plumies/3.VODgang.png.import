@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgiaaph6frya6"
-path="res://.godot/imported/Puzzle4-5-6-7-10.png-947197739d170206b3031dfaf3b87bc2.ctex"
+uid="uid://rxw3ampe73h1"
+path="res://.godot/imported/3.VODgang.png-2903f557066d94bc8420f6ad3258447d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Puzzle4-5-6-7-10.png"
-dest_files=["res://.godot/imported/Puzzle4-5-6-7-10.png-947197739d170206b3031dfaf3b87bc2.ctex"]
+source_file="res://Assets/Plumies/3.VODgang.png"
+dest_files=["res://.godot/imported/3.VODgang.png-2903f557066d94bc8420f6ad3258447d.ctex"]
 
 [params]
 

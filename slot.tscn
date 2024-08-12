@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmuy08qn4hdnj"]
 
-[ext_resource type="Texture2D" uid="uid://dbdnybuh53por" path="res://Assets/Block.png" id="1_i0dd1"]
+[ext_resource type="Texture2D" uid="uid://dbdnybuh53por" path="res://Assets/Backgrounds/Block.png" id="1_4wdb1"]
 [ext_resource type="Script" path="res://slot.gd" id="2_mibow"]
 
 [node name="Slot" type="TextureRect"]
 custom_minimum_size = Vector2(64, 64)
-texture = ExtResource("1_i0dd1")
+texture = ExtResource("1_4wdb1")
 expand_mode = 1
 script = ExtResource("2_mibow")
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtw070wcognet"]
+
+[ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://Levels/level_7.tscn" id="1_vib5d"]
+[ext_resource type="Texture2D" uid="uid://d0kcl6tghwcm" path="res://Assets/Backgrounds/6x6.png" id="2_oblfm"]
+
+[node name="Level13" instance=ExtResource("1_vib5d")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_oblfm")
+
+[node name="Label" parent="." index="1"]
+text = "
+LEVEL 13"

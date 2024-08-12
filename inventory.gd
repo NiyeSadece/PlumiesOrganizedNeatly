@@ -15,7 +15,7 @@ var icon_anchor : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in range(30):
+	for i in range(49):
 		create_slot()
 
 
@@ -57,7 +57,7 @@ func _on_slot_mouse_exited(a_Slot):
 func _on_button_spawn_pressed():
 	var new_item = item_scene.instantiate()
 	add_child(new_item)
-	new_item.load_item(randi_range(1,8))
+	new_item.load_item(randi_range(1,12))
 	new_item.selected = true
 	item_held = new_item
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://stocbakuabar"]
+
+[ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://Levels/level_7.tscn" id="1_26s5e"]
+[ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_wx5b4"]
+
+[node name="Level11" instance=ExtResource("1_26s5e")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_wx5b4")
+
+[node name="Label" parent="." index="1"]
+text = "
+LEVEL 11"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvoklfx2mm0gt"
-path="res://.godot/imported/Background.png-e8880a50f4091751eaed728281d3c21e.ctex"
+uid="uid://u4b7hrdi8dus"
+path="res://.godot/imported/12.MaizyandEmber.png-5bda648bc4952d3f9d213f84b636685b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background.png"
-dest_files=["res://.godot/imported/Background.png-e8880a50f4091751eaed728281d3c21e.ctex"]
+source_file="res://Assets/Plumies/12.MaizyandEmber.png"
+dest_files=["res://.godot/imported/12.MaizyandEmber.png-5bda648bc4952d3f9d213f84b636685b.ctex"]
 
 [params]
 
