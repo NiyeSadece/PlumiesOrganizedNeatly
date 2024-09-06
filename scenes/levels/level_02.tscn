@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu4bqi24v4u2v"]
+
+[ext_resource type="PackedScene" uid="uid://dplh27whcr5vj" path="res://scenes/levels/level_01.tscn" id="1_it4bo"]
+
+[node name="Level2" instance=ExtResource("1_it4bo")]
+
+[node name="Label" parent="TextureRect2" index="1"]
+text = "
+LEVEL 2"

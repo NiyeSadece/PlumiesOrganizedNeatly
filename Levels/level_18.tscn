@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1ogp3qb28vgo"]
-
-[ext_resource type="PackedScene" uid="uid://dtw070wcognet" path="res://Levels/level_13.tscn" id="1_dkrcm"]
-
-[node name="Level18" instance=ExtResource("1_dkrcm")]
-
-[node name="Label" parent="." index="1"]
-text = "
-LEVEL 18"

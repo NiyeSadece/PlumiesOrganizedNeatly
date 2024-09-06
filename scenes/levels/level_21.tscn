@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d6n2s1i04hl4"]
+
+[ext_resource type="PackedScene" uid="uid://b3yw2rpvjg0k4" path="res://scenes/levels/level_12.tscn" id="1_0h38i"]
+
+[node name="Level21" instance=ExtResource("1_0h38i")]
+
+[node name="Label" parent="." index="1"]
+text = "
+LEVEL 21"

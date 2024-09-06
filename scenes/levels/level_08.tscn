@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw1bq4q1elj6x"]
+
+[ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_0lbm7"]
+[ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_4d1cs"]
+
+[node name="Level8" instance=ExtResource("1_0lbm7")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_4d1cs")
+
+[node name="GridContainer" parent="TextureRect" index="0"]
+columns = 5
+
+[node name="Label" parent="." index="1"]
+text = "
+LEVEL 8"

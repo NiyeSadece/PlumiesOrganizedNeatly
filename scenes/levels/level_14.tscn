@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbhq33n1tmyua"]
+
+[ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_fijb1"]
+[ext_resource type="Texture2D" uid="uid://brqxalkgniex0" path="res://Assets/Backgrounds/7x7.png" id="2_k78rt"]
+
+[node name="Level14" instance=ExtResource("1_fijb1")]
+
+[node name="TextureRect" parent="." index="0"]
+texture = ExtResource("2_k78rt")
+
+[node name="GridContainer" parent="TextureRect" index="0"]
+columns = 7
+
+[node name="Label" parent="." index="1"]
+text = "
+LEVEL 14"

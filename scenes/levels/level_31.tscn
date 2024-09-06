@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djq72fe1nhxae"]
+
+[ext_resource type="PackedScene" uid="uid://b28dfgl3bt0su" path="res://scenes/levels/level_30.tscn" id="1_6l5um"]
+[ext_resource type="Texture2D" uid="uid://pkqfksxga66s" path="res://Assets/Backgrounds/8x8.png" id="2_gsoe4"]
+
+[node name="Level30" instance=ExtResource("1_6l5um")]
+
+[node name="TextureRect" parent="TextureRect2" index="0"]
+texture = ExtResource("2_gsoe4")

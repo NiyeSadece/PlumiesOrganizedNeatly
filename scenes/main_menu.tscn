@@ -1,0 +1,158 @@
+[gd_scene load_steps=19 format=3 uid="uid://cokoorkhgayuk"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_rb5me"]
+[ext_resource type="Texture2D" uid="uid://cvoklfx2mm0gt" path="res://Assets/Backgrounds/Background.png" id="2_uxv2f"]
+[ext_resource type="FontFile" uid="uid://et80egulo4w5" path="res://Assets/waifssk.ttf" id="3_f01uc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_so63f"]
+bg_color = Color(0.695809, 0.595449, 0.529611, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxghh"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejsoy"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1r7a"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmbsn"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j5l3"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k75bc"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0h6g"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftk7y"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rcgu"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gn6tu"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 1)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2iij"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mii1j"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gonn6"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ourw"]
+bg_color = Color(0.694118, 0.596078, 0.529412, 0.784314)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rb5me")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uxv2f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -79.0
+offset_right = 156.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.298039, 0.203922, 0.160784, 1)
+theme_override_colors/font_pressed_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_fonts/font = ExtResource("3_f01uc")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_so63f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hxghh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ejsoy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e1r7a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kmbsn")
+text = "START"
+
+[node name="Levels" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.298039, 0.203922, 0.160784, 1)
+theme_override_colors/font_pressed_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_fonts/font = ExtResource("3_f01uc")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_4j5l3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k75bc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d0h6g")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ftk7y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0rcgu")
+text = "LEVELS"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.298039, 0.203922, 0.160784, 1)
+theme_override_colors/font_pressed_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(0.329412, 0.231373, 0.192157, 1)
+theme_override_fonts/font = ExtResource("3_f01uc")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_gn6tu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f2iij")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mii1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gonn6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3ourw")
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

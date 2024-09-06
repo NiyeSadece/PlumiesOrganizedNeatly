@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpfdfaqpj4ac7"]
-
-[ext_resource type="PackedScene" uid="uid://doefjieuf1ut8" path="res://Levels/level_22.tscn" id="1_pfrk3"]
-
-[node name="Level26" instance=ExtResource("1_pfrk3")]
-
-[node name="Label" parent="." index="1"]
-text = "
-LEVEL 26"
