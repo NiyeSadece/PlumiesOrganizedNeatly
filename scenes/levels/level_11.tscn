@@ -1,16 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://stocbakuabar"]
+[gd_scene load_steps=5 format=3 uid="uid://stocbakuabar"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_26s5e"]
+[ext_resource type="Script" path="res://scripts/levels/level_11.gd" id="2_llihj"]
 [ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_wx5b4"]
+[ext_resource type="Texture2D" uid="uid://do8x5vnddxq0" path="res://Assets/Obstacles/Hair_tie.png" id="4_rs11u"]
 
 [node name="Level11" instance=ExtResource("1_26s5e")]
+script = ExtResource("2_llihj")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
 texture = ExtResource("2_wx5b4")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
 columns = 5
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 11"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-413, -248)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-54, 631)
+
+[node name="Popup" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="HairTie" type="Sprite2D" parent="." index="1"]
+position = Vector2(1055, 603)
+texture = ExtResource("4_rs11u")

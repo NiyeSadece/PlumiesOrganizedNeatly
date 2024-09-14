@@ -13,36 +13,38 @@ var can_place := false
 var icon_anchor : Vector2
 
 # List of predefined shapes to spawn
-var shape_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # Replace with your shape identifiers
+var shape_list = [7, 7, 11, 9, 16, 16, 17]  # Replace with your shape identifiers
 var shape_index = 0  # Track the current index of the shape to spawn
+var empty_spots = [0, 1, 6, 10, 17, 24, 27, 31, 38, 41, 42, 45, 48]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Create slots
 	for i in range(49):
-		if i == 0 or i == 6:
+		if i in empty_spots:
 			create_empty_slot()
 		else:
 			create_slot()
 	
-	# Automatically spawn an item
-	spawn_item()
-
-# Spawns an item based on the shape list
-func spawn_item():
-	if shape_index < shape_list.size():
+	var item_spawn_positions := [
+		Vector2(1500, 300),
+		Vector2(500, 300),
+		Vector2(1500, 600),
+		Vector2(500, 600),
+		Vector2(1500, 800),
+		Vector2(500, 800),
+		Vector2(1700, 300),
+	]
+	
+	for i in shape_list:
 		var new_item = item_scene.instantiate()
 		add_child(new_item)
-		
-		# Load item based on predefined shape
-		new_item.load_item(shape_list[shape_index])
-		new_item.selected = true
-		item_held = new_item
-		
-		# Move to the next shape in the list
+		new_item.load_item(i)  # Load different items based on the index
+		new_item.position = item_spawn_positions[shape_index]  # Set their position outside the grid
 		shape_index += 1
-	else:
-		print("All shapes have been spawned.")
+		new_item.selected = false
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -126,38 +128,99 @@ func rotate_item():
 		_on_slot_mouse_entered(current_slot)
 
 func place_item():
-	if not can_place or not current_slot:
-		return
-	var calculated_grid_id = current_slot.slot_ID + icon_anchor.x * col_count + icon_anchor.y
-	item_held._snap_to(grid_array[calculated_grid_id].global_position)
-	item_held.get_parent().remove_child(item_held)
-	grid_container.add_child(item_held)
-	item_held.global_position = get_global_mouse_position()
-	item_held.grid_anchor = current_slot
-	for grid in item_held.item_grids:
-		var grid_to_check = current_slot.slot_ID + grid[0] + grid[1] * col_count
-		grid_array[grid_to_check].state = grid_array[grid_to_check].States.TAKEN
-		grid_array[grid_to_check].item_stored = item_held
-	item_held = null
-	clear_grid()
+	if is_mouse_outside_grid():
+		# If the mouse is outside the grid, place the item freely
+		item_held.global_position = get_global_mouse_position()
+		item_held.get_parent().remove_child(item_held)
+		add_child(item_held)
+		
+		# Reset item anchor and grids, as it's no longer on the grid
+		item_held.grid_anchor = null
+		item_held = null
+		clear_grid()
+	else:
+		var calculated_grid_id = current_slot.slot_ID + icon_anchor.x * col_count + icon_anchor.y
+		item_held._snap_to(grid_array[calculated_grid_id].global_position)
+	
+		item_held.get_parent().remove_child(item_held)
+		grid_container.add_child(item_held)
+		item_held.global_position = get_global_mouse_position()
+	
+		item_held.grid_anchor = current_slot
+		for grid in item_held.item_grids:
+			var grid_to_check = current_slot.slot_ID + grid[0] + grid[1] * col_count
+			grid_array[grid_to_check].state = grid_array[grid_to_check].States.TAKEN
+			grid_array[grid_to_check].item_stored = item_held
+		
+		item_held = null
+		clear_grid()
+	
+	if check_if_puzzle_solved():
+		print("Puzzle Completed!")
+		$TextureRect2/HBoxContainer/Next.visible = true
 
+func check_if_puzzle_solved():
+	for slot in grid_array:
+		if slot.state != slot.States.TAKEN:
+			if slot.state != slot.States.OBSTACLE:
+				return false
+	return true
+	
+func is_mouse_outside_grid() -> bool:
+	var mouse_pos = get_global_mouse_position()
+	var grid_rect = grid_container.get_global_rect()  # Get the bounds of the grid container
+	return not grid_rect.has_point(mouse_pos)
+	
 func pick_item():
-	if not current_slot or not current_slot.item_stored:
+	if item_held:
 		return
-	item_held = current_slot.item_stored
-	item_held.selected = true
-	item_held.get_parent().remove_child(item_held)
-	add_child(item_held)
-	item_held.global_position = get_global_mouse_position()
-	for grid in item_held.item_grids:
-		var grid_to_check = item_held.grid_anchor.slot_ID + grid[0] + grid[1] * col_count
-		grid_array[grid_to_check].state = grid_array[grid_to_check].States.FREE
-		grid_array[grid_to_check].item_stored = null
-	check_slot_availability(current_slot)
-	set_grids.call_deferred(current_slot)
+		
+	var item_to_pick = get_item_under_mouse()
+	if item_to_pick:
+		item_held = item_to_pick
+		item_held.selected = true
+		add_child(item_held)
+		item_held.global_position = get_global_mouse_position()
+		return
+		
+	if current_slot and current_slot.item_stored:
+		# Detach the item from the current slot
+		item_held = current_slot.item_stored
+		item_held.selected = true
+		
+		# Remove item from the grid and reset the slot
+		for grid in item_held.item_grids:
+			var grid_to_check = item_held.grid_anchor.slot_ID + grid[0] + grid[1] * col_count
+			grid_array[grid_to_check].state = grid_array[grid_to_check].States.FREE
+			grid_array[grid_to_check].item_stored = null
+		
+		item_held.get_parent().remove_child(item_held)
+		add_child(item_held)
+		item_held.global_position = get_global_mouse_position()
+
+		# Reset the slot anchor
+		item_held.grid_anchor = null
+
+	
+func get_item_under_mouse():
+	for item in get_children():
+		if item is Item and is_mouse_over_item(item):
+			return item
+	return null
+	
+func is_mouse_over_item(item: Node2D) -> bool:
+	var texture_rect = item.get_node("Icon")
+	if texture_rect:
+		var global_rect = Rect2(item.global_position - texture_rect.size / 2, texture_rect.size)
+		return global_rect.has_point(get_global_mouse_position())
+	return false
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/level_selector.tscn")
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level_01.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_28.tscn")
+
+func _on_next_pressed():
+	get_tree().change_scene_to_file("res://scenes/levels/level_29.tscn")
+

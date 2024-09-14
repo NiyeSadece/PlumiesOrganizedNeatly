@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0kue6nk0wooa"]
+[gd_scene load_steps=4 format=3 uid="uid://b0kue6nk0wooa"]
 
 [ext_resource type="PackedScene" uid="uid://b3yw2rpvjg0k4" path="res://scenes/levels/level_12.tscn" id="1_5hx81"]
+[ext_resource type="Script" path="res://scripts/levels/level_16.gd" id="2_rygid"]
+[ext_resource type="Texture2D" uid="uid://d3omj2w7wllmq" path="res://Assets/Plumies/11.Miri.png" id="3_ocvrg"]
 
 [node name="Level16" instance=ExtResource("1_5hx81")]
+script = ExtResource("2_rygid")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 16"
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("3_ocvrg")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Miri"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "Be it art or witty puns, this little 
+mage is always on top of her 
+game, constantly surprising 
+everyone with a new masterpiece."

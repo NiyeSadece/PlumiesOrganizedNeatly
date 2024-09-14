@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://d6n2s1i04hl4"]
+[gd_scene load_steps=4 format=3 uid="uid://d6n2s1i04hl4"]
 
 [ext_resource type="PackedScene" uid="uid://b3yw2rpvjg0k4" path="res://scenes/levels/level_12.tscn" id="1_0h38i"]
+[ext_resource type="Script" path="res://scripts/levels/level_21.gd" id="2_wl08r"]
+[ext_resource type="Texture2D" uid="uid://bmmhj3s83j6t0" path="res://Assets/Obstacles/Pin.png" id="3_tbx51"]
 
 [node name="Level21" instance=ExtResource("1_0h38i")]
+script = ExtResource("2_wl08r")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 21"
+
+[node name="Popup" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="Pin" type="Sprite2D" parent="." index="1"]
+position = Vector2(1116, 532)
+texture = ExtResource("3_tbx51")

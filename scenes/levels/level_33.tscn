@@ -1,5 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkxot50srp8ue"]
+[gd_scene load_steps=10 format=3 uid="uid://bkxot50srp8ue"]
 
 [ext_resource type="PackedScene" uid="uid://wwhdm53odg7c" path="res://scenes/levels/level_32.tscn" id="1_xq1yr"]
+[ext_resource type="Script" path="res://scripts/levels/level_33.gd" id="2_00wja"]
+[ext_resource type="Texture2D" uid="uid://b0tw1qgw8v23q" path="res://Assets/Obstacles/Final level 33/Balloons.png" id="3_dm3mw"]
+[ext_resource type="Texture2D" uid="uid://j01fm80c2pbp" path="res://Assets/Obstacles/Final level 33/Cake.png" id="4_qqxvp"]
+[ext_resource type="Texture2D" uid="uid://bm587tw7kdt6o" path="res://Assets/Obstacles/Final level 33/Flags.png" id="5_x0mis"]
+[ext_resource type="Texture2D" uid="uid://d2ardkovddcvm" path="res://Assets/Obstacles/Final level 33/Gift2.png" id="6_qexe2"]
+[ext_resource type="Texture2D" uid="uid://dcr1comec8e70" path="res://Assets/Obstacles/Final level 33/Gift.png" id="7_1thwk"]
+[ext_resource type="Texture2D" uid="uid://cokveotto85st" path="res://Assets/Obstacles/Final level 33/Tulips.png" id="8_e53rw"]
+[ext_resource type="Texture2D" uid="uid://bmjl1xtirptsp" path="res://Assets/Plumies/21.Harrier.png" id="9_76tuj"]
 
 [node name="Level30" instance=ExtResource("1_xq1yr")]
+script = ExtResource("2_00wja")
+
+[node name="Label" parent="TextureRect2" index="1"]
+text = "
+LEVEL 33"
+
+[node name="Pin" parent="TextureRect2" index="11"]
+visible = false
+
+[node name="FlyingButton2" parent="TextureRect2" index="12"]
+visible = false
+
+[node name="Balloons" type="Sprite2D" parent="TextureRect2" index="13"]
+position = Vector2(1163, 369)
+texture = ExtResource("3_dm3mw")
+
+[node name="Cake" type="Sprite2D" parent="TextureRect2" index="14"]
+position = Vector2(1183, 765)
+texture = ExtResource("4_qqxvp")
+
+[node name="Flags" type="Sprite2D" parent="TextureRect2" index="15"]
+position = Vector2(864, 316)
+texture = ExtResource("5_x0mis")
+
+[node name="Gift2" type="Sprite2D" parent="TextureRect2" index="16"]
+position = Vector2(1025, 476)
+texture = ExtResource("6_qexe2")
+
+[node name="Gift" type="Sprite2D" parent="TextureRect2" index="17"]
+position = Vector2(738, 381)
+texture = ExtResource("7_1thwk")
+
+[node name="Tulips" type="Sprite2D" parent="TextureRect2" index="18"]
+position = Vector2(992, 731)
+texture = ExtResource("8_e53rw")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("9_76tuj")
+
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "Oh look, you found the last Plumie! It’s"
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Harrier"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "This Plumie lives in creative chaos, 
+rushing between so many projects 
+she can't remember what kind of 
+bird she's supposed to be."

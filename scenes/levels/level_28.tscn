@@ -1,9 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://c75csomn5g0fm"]
+[gd_scene load_steps=8 format=3 uid="uid://c75csomn5g0fm"]
 
 [ext_resource type="PackedScene" uid="uid://dbhq33n1tmyua" path="res://scenes/levels/level_14.tscn" id="1_vri14"]
+[ext_resource type="Script" path="res://scripts/levels/level_28.gd" id="2_0p50j"]
+[ext_resource type="Texture2D" uid="uid://behqmgw65r241" path="res://Assets/Obstacles/Gemstone.png" id="3_wpbj6"]
+[ext_resource type="Texture2D" uid="uid://cnumemimd4dyi" path="res://Assets/Obstacles/Books1.png" id="4_kmpgs"]
+[ext_resource type="Texture2D" uid="uid://6bhjpotvijil" path="res://Assets/Obstacles/Books2.png" id="5_q8rd3"]
+[ext_resource type="Texture2D" uid="uid://dq7a6ypj7phgo" path="res://Assets/Obstacles/Glasses.png" id="6_amxuv"]
+[ext_resource type="Texture2D" uid="uid://cuh3lboeij8ux" path="res://Assets/Obstacles/Snack.png" id="7_irs55"]
 
 [node name="Level28" instance=ExtResource("1_vri14")]
+script = ExtResource("2_0p50j")
 
-[node name="Label" parent="." index="1"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
+visible = true
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 7
+
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 28"
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(1153, 347)
+
+[node name="Stamp" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="InkFeather2" parent="TextureRect2" index="6"]
+visible = false
+
+[node name="InkFeather" parent="TextureRect2" index="7"]
+visible = false
+
+[node name="Popup" parent="TextureRect2" index="8"]
+visible = false
+
+[node name="Gemstone" type="Sprite2D" parent="." index="1"]
+position = Vector2(1151, 540)
+texture = ExtResource("3_wpbj6")
+
+[node name="Books1" type="Sprite2D" parent="." index="2"]
+position = Vector2(768, 735)
+texture = ExtResource("4_kmpgs")
+
+[node name="Books2" type="Sprite2D" parent="." index="3"]
+position = Vector2(1154, 700)
+texture = ExtResource("5_q8rd3")
+
+[node name="Glasses" type="Sprite2D" parent="." index="4"]
+position = Vector2(800, 346)
+texture = ExtResource("6_amxuv")
+
+[node name="Snack" type="Sprite2D" parent="." index="5"]
+position = Vector2(959, 573)
+rotation = 1.5708
+texture = ExtResource("7_irs55")

@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv7seacwev1u2"]
+[gd_scene load_steps=4 format=3 uid="uid://dv7seacwev1u2"]
 
 [ext_resource type="PackedScene" uid="uid://dy2kcf2f08mpw" path="res://scenes/levels/level_23.tscn" id="1_xmf2m"]
+[ext_resource type="Script" path="res://scripts/levels/level_27.gd" id="2_ccdmd"]
+[ext_resource type="Texture2D" uid="uid://dodl3qs1d1aq4" path="res://Assets/Obstacles/Stamp.png" id="3_y4kni"]
 
 [node name="Level27" instance=ExtResource("1_xmf2m")]
+script = ExtResource("2_ccdmd")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 27"
+
+[node name="Watch" parent="TextureRect2" index="6"]
+visible = false
+
+[node name="Stamp" type="Sprite2D" parent="TextureRect2" index="7"]
+position = Vector2(928, 442)
+texture = ExtResource("3_y4kni")
+
+[node name="TextureRect" parent="TextureRect2/Popup" index="0"]
+visible = false

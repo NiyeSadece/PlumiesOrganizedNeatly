@@ -1,9 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://6uyamtistscq"]
+[gd_scene load_steps=6 format=3 uid="uid://6uyamtistscq"]
 
 [ext_resource type="PackedScene" uid="uid://1jddokkx7uqe" path="res://scenes/levels/level_04.tscn" id="1_rg4jb"]
+[ext_resource type="Script" path="res://scripts/levels/level_07.gd" id="2_vd855"]
+[ext_resource type="Texture2D" uid="uid://dn6hc6qsfi05e" path="res://Assets/Obstacles/Teabag.png" id="3_28153"]
+[ext_resource type="Texture2D" uid="uid://txy8jmhhqj6t" path="res://Assets/Obstacles/Teacup.png" id="4_kdy3c"]
+[ext_resource type="Texture2D" uid="uid://ciy5wbtjcros2" path="res://Assets/Plumies/5.Momo.png" id="5_fmmcq"]
 
 [node name="Level7" instance=ExtResource("1_rg4jb")]
+script = ExtResource("2_vd855")
 
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 7"
+
+[node name="Teabag" type="Sprite2D" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(603, -220)
+texture = ExtResource("3_28153")
+
+[node name="Teacup" type="Sprite2D" parent="TextureRect2" index="4"]
+position = Vector2(928, 639)
+texture = ExtResource("4_kdy3c")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("5_fmmcq")
+
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "Oh look, you found another Plumie! It’s"
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Momo"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "She pops up anywhere and 
+everywhere when you least expect it. 
+If given the chance, she’ll talk your 
+feathers off about glasses, maybe 
+even bribe you into wearing them
+for her own enjoyment and 
+spreading the wisdom of glasses."

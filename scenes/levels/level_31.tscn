@@ -1,9 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://djq72fe1nhxae"]
+[gd_scene load_steps=8 format=3 uid="uid://djq72fe1nhxae"]
 
 [ext_resource type="PackedScene" uid="uid://b28dfgl3bt0su" path="res://scenes/levels/level_30.tscn" id="1_6l5um"]
+[ext_resource type="Script" path="res://scripts/levels/level_31.gd" id="2_2cank"]
 [ext_resource type="Texture2D" uid="uid://pkqfksxga66s" path="res://Assets/Backgrounds/8x8.png" id="2_gsoe4"]
+[ext_resource type="Texture2D" uid="uid://cnumemimd4dyi" path="res://Assets/Obstacles/Books1.png" id="4_6dm3b"]
+[ext_resource type="Texture2D" uid="uid://6bhjpotvijil" path="res://Assets/Obstacles/Books2.png" id="5_bhjwt"]
+[ext_resource type="Texture2D" uid="uid://dq7a6ypj7phgo" path="res://Assets/Obstacles/Glasses.png" id="6_xm3qf"]
+[ext_resource type="Texture2D" uid="uid://xpsgfxnnxdo3" path="res://Assets/Plumies/19.Mike.png" id="7_c5do3"]
 
 [node name="Level30" instance=ExtResource("1_6l5um")]
+script = ExtResource("2_2cank")
 
 [node name="TextureRect" parent="TextureRect2" index="0"]
+visible = false
 texture = ExtResource("2_gsoe4")
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 8
+
+[node name="Label" parent="TextureRect2" index="1"]
+text = "
+LEVEL 31"
+
+[node name="Books1" type="Sprite2D" parent="TextureRect2" index="8"]
+position = Vector2(864, 315)
+texture = ExtResource("4_6dm3b")
+
+[node name="Books2" type="Sprite2D" parent="TextureRect2" index="9"]
+position = Vector2(1186, 730)
+texture = ExtResource("5_bhjwt")
+
+[node name="Glasses" type="Sprite2D" parent="TextureRect2" index="10"]
+position = Vector2(737, 411)
+rotation = -1.5708
+texture = ExtResource("6_xm3qf")
+
+[node name="Popup" parent="TextureRect2" index="11"]
+visible = true
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("7_c5do3")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Crazy Mike"

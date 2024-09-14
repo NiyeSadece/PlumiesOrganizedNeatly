@@ -1,9 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://1jddokkx7uqe"]
+[gd_scene load_steps=5 format=3 uid="uid://1jddokkx7uqe"]
 
 [ext_resource type="PackedScene" uid="uid://c75svdi331m4y" path="res://scenes/levels/level_03.tscn" id="1_ygxhn"]
+[ext_resource type="Script" path="res://scripts/levels/level_04.gd" id="2_gnqrg"]
+[ext_resource type="Texture2D" uid="uid://dlm6no8loxsoy" path="res://Assets/Backgrounds/4x4.png" id="3_qvgg1"]
+[ext_resource type="Texture2D" uid="uid://rxw3ampe73h1" path="res://Assets/Plumies/3.VODgang.png" id="4_chpxo"]
 
 [node name="Level4" instance=ExtResource("1_ygxhn")]
+script = ExtResource("2_gnqrg")
+
+[node name="TextureRect" parent="TextureRect2" index="0"]
+texture = ExtResource("3_qvgg1")
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 4
 
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 4"
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_chpxo")
+stretch_mode = 3
+
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "Oh, what’s this? It’s the"
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "VOD gang"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "You may not notice them right away, 
+but they always have supported Vil 
+through all his endeavours. Even 
+when they’re hard to spot, they’re 
+still one of the Plumies."

@@ -1,16 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbhq33n1tmyua"]
+[gd_scene load_steps=8 format=3 uid="uid://dbhq33n1tmyua"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_fijb1"]
 [ext_resource type="Texture2D" uid="uid://brqxalkgniex0" path="res://Assets/Backgrounds/7x7.png" id="2_k78rt"]
+[ext_resource type="Script" path="res://scripts/levels/level_14.gd" id="2_v7xl6"]
+[ext_resource type="Texture2D" uid="uid://dodl3qs1d1aq4" path="res://Assets/Obstacles/Stamp.png" id="4_m2vfo"]
+[ext_resource type="Texture2D" uid="uid://cdqd5bxauo71h" path="res://Assets/Obstacles/Ink_feather2.png" id="5_q53y7"]
+[ext_resource type="Texture2D" uid="uid://ctwle4mjoy8p3" path="res://Assets/Obstacles/Ink_feather.png" id="6_klkcc"]
+[ext_resource type="Texture2D" uid="uid://tk4cwlv25cpj" path="res://Assets/Plumies/9.Nanni.png" id="7_g1d45"]
 
 [node name="Level14" instance=ExtResource("1_fijb1")]
+script = ExtResource("2_v7xl6")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
+visible = false
 texture = ExtResource("2_k78rt")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
-columns = 7
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 5
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 14"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-368, -163)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-53, 699)
+
+[node name="Stamp" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(960, 730)
+texture = ExtResource("4_m2vfo")
+
+[node name="InkFeather2" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(737, 637)
+texture = ExtResource("5_q53y7")
+
+[node name="InkFeather" type="Sprite2D" parent="TextureRect2" index="7"]
+position = Vector2(1183, 638)
+texture = ExtResource("6_klkcc")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("7_g1d45")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Nanni"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = " glasses."

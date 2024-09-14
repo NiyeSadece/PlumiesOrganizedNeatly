@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4s8wkg0xwgfe"]
 
-[ext_resource type="Script" path="res://scenes/empty_slot.gd" id="1_brhi8"]
+[ext_resource type="Script" path="res://scripts/empty_slot.gd" id="1_chfb3"]
 
 [node name="EmptySlot" type="TextureRect"]
 custom_minimum_size = Vector2(64, 64)
 expand_mode = 1
-script = ExtResource("1_brhi8")
+script = ExtResource("1_chfb3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

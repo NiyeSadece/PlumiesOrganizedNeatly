@@ -1,16 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw1bq4q1elj6x"]
+[gd_scene load_steps=5 format=3 uid="uid://cw1bq4q1elj6x"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_0lbm7"]
 [ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_4d1cs"]
+[ext_resource type="Script" path="res://scripts/levels/level_08.gd" id="2_axr3r"]
+[ext_resource type="Texture2D" uid="uid://0xybcscu2ywh" path="res://Assets/Plumies/6.Lysander.png" id="4_b1213"]
 
 [node name="Level8" instance=ExtResource("1_0lbm7")]
+script = ExtResource("2_axr3r")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
 texture = ExtResource("2_4d1cs")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
 columns = 5
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 8"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-319, -166)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-63, 694)
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_b1213")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Lysander"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "He is often found wandering 
+around, taking pictures of the 
+other Plumies doing their 
+favourite activities. He finds 
+it important to immortalise 
+everyone and treasures 
+every take."

@@ -1,31 +1,16 @@
 extends Node2D
-
+class_name Item
 @onready var IconRect_path = $Icon
 
 var item_ID : int
 var item_grids := []
 var selected = false
 var grid_anchor = null
-var is_dragging = false
-var delay = 2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if selected:
 		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)
-
-func _physics_process(delta):
-	if is_dragging == true:
-		var tween = get_tree().create_tween()
-		tween.tween_property(self, "position", get_global_mouse_position(), delay * delta)
-	
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			if $Icon.get_rect().has_point(to_local(event.position)):
-				is_dragging = true
-		else:
-			is_dragging = false
 			
 			
 func load_item(a_ItemID : int):

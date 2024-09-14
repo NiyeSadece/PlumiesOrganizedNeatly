@@ -1,9 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://6edrwanauj1"]
+[gd_scene load_steps=5 format=3 uid="uid://6edrwanauj1"]
 
 [ext_resource type="PackedScene" uid="uid://b3yw2rpvjg0k4" path="res://scenes/levels/level_12.tscn" id="1_m3c4f"]
+[ext_resource type="Script" path="res://scripts/levels/level_15.gd" id="2_1o4fv"]
+[ext_resource type="Texture2D" uid="uid://bqgpblsgrmi7f" path="res://Assets/Obstacles/FlyingButton.png" id="3_oewnj"]
+[ext_resource type="Texture2D" uid="uid://dclxdqq03o0wo" path="res://Assets/Plumies/10.Oma.png" id="4_xsqpv"]
 
 [node name="Level15" instance=ExtResource("1_m3c4f")]
+script = ExtResource("2_1o4fv")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 15"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-340, -245)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-74, 674)
+
+[node name="FlyingButton" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(865, 668)
+texture = ExtResource("3_oewnj")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_xsqpv")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Oma"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "Manifesting fishies that fight for 
+their lives, manifesting fishies that 
+fight for their lives, manifesting 
+fishies that fight for their-... :D"

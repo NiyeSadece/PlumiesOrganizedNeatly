@@ -1,13 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyo6lq1hkfnnm"]
+[gd_scene load_steps=6 format=3 uid="uid://dyo6lq1hkfnnm"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_uhj4u"]
-[ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_c7oh7"]
+[ext_resource type="Script" path="res://scripts/levels/level_10.gd" id="2_02wnj"]
+[ext_resource type="Texture2D" uid="uid://dq7a6ypj7phgo" path="res://Assets/Obstacles/Glasses.png" id="3_im0p3"]
+[ext_resource type="Texture2D" uid="uid://cnumemimd4dyi" path="res://Assets/Obstacles/Books1.png" id="4_5gnjs"]
+[ext_resource type="Texture2D" uid="uid://dj4btd6xh4du0" path="res://Assets/Plumies/7.Niye.png" id="5_ld0ap"]
 
 [node name="Level10" instance=ExtResource("1_uhj4u")]
+script = ExtResource("2_02wnj")
 
-[node name="TextureRect" parent="." index="0"]
-texture = ExtResource("2_c7oh7")
-
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 10"
+
+[node name="Control" parent="TextureRect2" index="2"]
+offset_left = -773.0
+offset_top = -321.0
+offset_right = 776.0
+offset_bottom = 295.0
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-316, -172)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-42, 813)
+
+[node name="Glasses" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(1025, 508)
+texture = ExtResource("3_im0p3")
+
+[node name="Books1" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(863, 636)
+texture = ExtResource("4_5gnjs")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("5_ld0ap")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Niye"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "Colors that don’t mind double 
+dates but have to stay with the 
+same color, Puzzles where you 
+follow the tone of sound effects, 
+and even coding Plumies 
+Organized Neatly, this 
+Plumie’s got it all!"

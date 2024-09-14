@@ -1,16 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3yw2rpvjg0k4"]
+[gd_scene load_steps=5 format=3 uid="uid://b3yw2rpvjg0k4"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_0jk6f"]
 [ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_idy8d"]
+[ext_resource type="Script" path="res://scripts/levels/level_12.gd" id="2_y2hem"]
+[ext_resource type="Texture2D" uid="uid://doecpke37jni5" path="res://Assets/Plumies/8.Natsu.png" id="4_sy1gt"]
 
 [node name="Level12" instance=ExtResource("1_0jk6f")]
+script = ExtResource("2_y2hem")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
 texture = ExtResource("2_idy8d")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
 columns = 5
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 12"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+visible = false
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+visible = false
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_sy1gt")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Natsu"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "Unable to keep her hands still, 
+the resident shapeshifter is always 
+fiddling with something, be it 
+a new bracelet, a wig or some 
+other cosplay-related crafting."

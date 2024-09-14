@@ -1,16 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtw070wcognet"]
+[gd_scene load_steps=5 format=3 uid="uid://dtw070wcognet"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_vib5d"]
+[ext_resource type="Script" path="res://scripts/levels/level_13.gd" id="2_m80p7"]
 [ext_resource type="Texture2D" uid="uid://d0kcl6tghwcm" path="res://Assets/Backgrounds/6x6.png" id="2_oblfm"]
+[ext_resource type="Texture2D" uid="uid://behqmgw65r241" path="res://Assets/Obstacles/Gemstone.png" id="4_78e4f"]
 
 [node name="Level13" instance=ExtResource("1_vib5d")]
+script = ExtResource("2_m80p7")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
 texture = ExtResource("2_oblfm")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
 columns = 6
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 13"
+
+[node name="Control" parent="TextureRect2" index="2"]
+offset_left = -841.0
+offset_top = -300.0
+offset_right = 708.0
+offset_bottom = 316.0
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+visible = false
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+visible = false
+
+[node name="Popup" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="Gemstone" type="Sprite2D" parent="." index="1"]
+position = Vector2(1056, 508)
+texture = ExtResource("4_78e4f")

@@ -1,9 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy2kcf2f08mpw"]
+[gd_scene load_steps=5 format=3 uid="uid://dy2kcf2f08mpw"]
 
 [ext_resource type="PackedScene" uid="uid://d24jbp7bv455d" path="res://scenes/levels/level_20.tscn" id="1_xoxry"]
+[ext_resource type="Script" path="res://scripts/levels/level_23.gd" id="2_gn8fs"]
+[ext_resource type="Texture2D" uid="uid://16nhq7outt2s" path="res://Assets/Obstacles/Watch.png" id="3_jwovl"]
+[ext_resource type="Texture2D" uid="uid://c5xq5mihyqs5y" path="res://Assets/Plumies/15.Maaxter.png" id="4_33xpt"]
 
 [node name="Level23" instance=ExtResource("1_xoxry")]
+script = ExtResource("2_gn8fs")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 23"
+
+[node name="Snack" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="Watch" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(825, 540)
+texture = ExtResource("3_jwovl")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_33xpt")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Maaxter"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "Looks like he brought some friends 
+along to play cards, he likes playing 
+casually but also likes to put on a 
+show if he thinks he’s ready to win, 
+things are getting heated!"

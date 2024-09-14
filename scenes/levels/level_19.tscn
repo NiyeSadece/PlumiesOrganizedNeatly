@@ -1,9 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1b0mnsdv50vu"]
+[gd_scene load_steps=3 format=3 uid="uid://c1b0mnsdv50vu"]
 
 [ext_resource type="PackedScene" uid="uid://dbhq33n1tmyua" path="res://scenes/levels/level_14.tscn" id="1_jjrtv"]
+[ext_resource type="Script" path="res://scripts/levels/level_19.gd" id="2_vrba5"]
 
 [node name="Level19" instance=ExtResource("1_jjrtv")]
+script = ExtResource("2_vrba5")
 
-[node name="Label" parent="." index="1"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
+visible = true
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 7
+
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 19"
+
+[node name="Stamp" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="InkFeather2" parent="TextureRect2" index="6"]
+position = Vector2(737, 569)
+
+[node name="InkFeather" parent="TextureRect2" index="7"]
+visible = false
+
+[node name="Popup" parent="TextureRect2" index="8"]
+visible = false

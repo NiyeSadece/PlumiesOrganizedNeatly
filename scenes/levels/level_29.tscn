@@ -1,9 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8em3n3pw7ua6"]
+[gd_scene load_steps=5 format=3 uid="uid://b8em3n3pw7ua6"]
 
 [ext_resource type="PackedScene" uid="uid://dbhq33n1tmyua" path="res://scenes/levels/level_14.tscn" id="1_bfvme"]
+[ext_resource type="Script" path="res://scripts/levels/level_29.gd" id="2_ilw84"]
+[ext_resource type="Texture2D" uid="uid://w4hhp44vc4o7" path="res://Assets/Obstacles/Watch2.png" id="3_14r67"]
+[ext_resource type="Texture2D" uid="uid://dmmjeuw88ibpq" path="res://Assets/Plumies/18.Garu.png" id="4_cwp1m"]
 
 [node name="Level29" instance=ExtResource("1_bfvme")]
+script = ExtResource("2_ilw84")
 
-[node name="Label" parent="." index="1"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 7
+
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 29"
+
+[node name="Stamp" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="InkFeather2" parent="TextureRect2" index="6"]
+visible = false
+
+[node name="InkFeather" parent="TextureRect2" index="7"]
+visible = false
+
+[node name="Watch2" type="Sprite2D" parent="TextureRect2" index="8"]
+position = Vector2(928, 606)
+texture = ExtResource("3_14r67")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_cwp1m")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Garu"

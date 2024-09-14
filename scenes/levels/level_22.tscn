@@ -1,9 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://doefjieuf1ut8"]
+[gd_scene load_steps=5 format=3 uid="uid://doefjieuf1ut8"]
 
 [ext_resource type="PackedScene" uid="uid://b3yw2rpvjg0k4" path="res://scenes/levels/level_12.tscn" id="1_nqoqk"]
+[ext_resource type="Script" path="res://scripts/levels/level_22.gd" id="2_c0811"]
+[ext_resource type="Texture2D" uid="uid://behqmgw65r241" path="res://Assets/Obstacles/Gemstone.png" id="3_uog3c"]
+[ext_resource type="Texture2D" uid="uid://dkp0qtt4q01m5" path="res://Assets/Plumies/14.Joy.png" id="4_k585w"]
 
 [node name="Level22" instance=ExtResource("1_nqoqk")]
+script = ExtResource("2_c0811")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 22"
+
+[node name="Gemstone" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(832, 412)
+texture = ExtResource("3_uog3c")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_k585w")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Joy"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "She thinks she has power over 
+yarn, but the yarn overpowers her 
+more often than not. Troublesome 
+yarn can't stop this Plumie from 
+having fun."

@@ -1,9 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxiswoc7ow6y"]
+[gd_scene load_steps=5 format=3 uid="uid://bxiswoc7ow6y"]
 
 [ext_resource type="PackedScene" uid="uid://1jddokkx7uqe" path="res://scenes/levels/level_04.tscn" id="1_2wryq"]
+[ext_resource type="Script" path="res://scripts/levels/level_05.gd" id="2_wxm6v"]
+[ext_resource type="Texture2D" uid="uid://ww8b8ioqqofc" path="res://Assets/Plumies/1.Cytri.png" id="3_4fq37"]
+[ext_resource type="Texture2D" uid="uid://ctwle4mjoy8p3" path="res://Assets/Obstacles/Ink_feather.png" id="3_uerve"]
 
 [node name="Level5" instance=ExtResource("1_2wryq")]
+script = ExtResource("2_wxm6v")
 
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 5"
+
+[node name="Popup" parent="TextureRect2" index="4"]
+visible = false
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("3_4fq37")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect" index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 423.0
+offset_bottom = 64.0
+text = "Cytri"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect" index="3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 423.0
+offset_bottom = 287.0
+text = "With a warm welcome, she always 
+makes sure each and every one 
+feels right at home, not even her 
+lemons can sour the mood."
+
+[node name="InkFeather" type="Sprite2D" parent="." index="1"]
+position = Vector2(961, 536)
+texture = ExtResource("3_uerve")

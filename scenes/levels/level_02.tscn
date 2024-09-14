@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu4bqi24v4u2v"]
+[gd_scene load_steps=3 format=3 uid="uid://cu4bqi24v4u2v"]
 
 [ext_resource type="PackedScene" uid="uid://dplh27whcr5vj" path="res://scenes/levels/level_01.tscn" id="1_it4bo"]
+[ext_resource type="Script" path="res://scripts/levels/level_02.gd" id="2_wdskc"]
 
 [node name="Level2" instance=ExtResource("1_it4bo")]
+script = ExtResource("2_wdskc")
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 3
 
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 2"
+
+[node name="Popup" parent="TextureRect2" index="4"]
+visible = false
+
+[node name="TextureRect" parent="TextureRect2/Popup" index="0"]
+layout_mode = 0
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect" index="2"]
+layout_mode = 0
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect" index="3"]
+layout_mode = 0

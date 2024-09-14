@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3ivro43lqm43"]
 
 [ext_resource type="Script" path="res://scripts/level_selector.gd" id="1_cfdk0"]
-[ext_resource type="Texture2D" uid="uid://cvoklfx2mm0gt" path="res://Assets/Backgrounds/Background.png" id="1_tueok"]
+[ext_resource type="Texture2D" uid="uid://b133kg73y3nn6" path="res://Assets/Backgrounds/Background_Menu.png" id="2_keu3p"]
 [ext_resource type="FontFile" uid="uid://et80egulo4w5" path="res://Assets/waifssk.ttf" id="2_sb34h"]
 [ext_resource type="Texture2D" uid="uid://by81lnlc142v0" path="res://Assets/Button_back.png" id="3_7m8vb"]
 [ext_resource type="StyleBox" uid="uid://c61hcd6oih5ri" path="res://scenes/level_selector.tres" id="4_v53wy"]
@@ -28,7 +28,7 @@ offset_right = 960.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_tueok")
+texture = ExtResource("2_keu3p")
 
 [node name="Back" type="Button" parent="TextureRect"]
 layout_mode = 0

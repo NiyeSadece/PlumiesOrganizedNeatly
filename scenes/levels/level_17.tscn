@@ -1,9 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dknvjwigy6kht"]
+[gd_scene load_steps=3 format=3 uid="uid://dknvjwigy6kht"]
 
 [ext_resource type="PackedScene" uid="uid://dtw070wcognet" path="res://scenes/levels/level_13.tscn" id="1_wdbda"]
+[ext_resource type="Script" path="res://scripts/levels/level_17.gd" id="2_ilhx5"]
 
 [node name="Level17" instance=ExtResource("1_wdbda")]
+script = ExtResource("2_ilhx5")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 17"
+
+[node name="Control" parent="TextureRect2" index="2"]
+offset_left = -774.5
+offset_top = -308.0
+offset_right = 774.5
+offset_bottom = 308.0
+
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "“Oh look, you found another Plumie! It’s"
+
+[node name="Gemstone" parent="." index="1"]
+position = Vector2(-79, 565)

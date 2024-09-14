@@ -1,16 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4xv040pps05i"]
+[gd_scene load_steps=6 format=3 uid="uid://c4xv040pps05i"]
 
 [ext_resource type="PackedScene" uid="uid://6uyamtistscq" path="res://scenes/levels/level_07.tscn" id="1_s04rd"]
+[ext_resource type="Script" path="res://scripts/levels/level_09.gd" id="2_4027k"]
 [ext_resource type="Texture2D" uid="uid://dj7vfimbhicqc" path="res://Assets/Backgrounds/5x5.png" id="2_hwnlf"]
+[ext_resource type="Texture2D" uid="uid://cnumemimd4dyi" path="res://Assets/Obstacles/Books1.png" id="3_buqfe"]
+[ext_resource type="Texture2D" uid="uid://6bhjpotvijil" path="res://Assets/Obstacles/Books2.png" id="4_pj7a1"]
 
 [node name="Level9" instance=ExtResource("1_s04rd")]
+script = ExtResource("2_4027k")
 
-[node name="TextureRect" parent="." index="0"]
+[node name="TextureRect" parent="TextureRect2" index="0"]
 texture = ExtResource("2_hwnlf")
 
-[node name="GridContainer" parent="TextureRect" index="0"]
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
 columns = 5
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 9"
+
+[node name="Teabag" parent="TextureRect2/HBoxContainer" index="3"]
+position = Vector2(-408, -82)
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+position = Vector2(-96, 777)
+
+[node name="Books1" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(1025, 604)
+texture = ExtResource("3_buqfe")
+
+[node name="Books2" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(1089, 636)
+texture = ExtResource("4_pj7a1")
+
+[node name="Popup" parent="TextureRect2" index="7"]
+visible = false

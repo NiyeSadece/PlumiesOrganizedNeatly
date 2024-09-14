@@ -1,9 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpfdfaqpj4ac7"]
+[gd_scene load_steps=6 format=3 uid="uid://cpfdfaqpj4ac7"]
 
 [ext_resource type="PackedScene" uid="uid://doefjieuf1ut8" path="res://scenes/levels/level_22.tscn" id="1_pfrk3"]
+[ext_resource type="Script" path="res://scripts/levels/level_26.gd" id="2_22l4g"]
+[ext_resource type="Texture2D" uid="uid://cnumemimd4dyi" path="res://Assets/Obstacles/Books1.png" id="3_j4mcm"]
+[ext_resource type="Texture2D" uid="uid://6bhjpotvijil" path="res://Assets/Obstacles/Books2.png" id="4_yboit"]
+[ext_resource type="Texture2D" uid="uid://rlb007wt4oxg" path="res://Assets/Plumies/17.Neon.png" id="5_iv4yh"]
 
 [node name="Level26" instance=ExtResource("1_pfrk3")]
+script = ExtResource("2_22l4g")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 26"
+
+[node name="Gemstone" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="Books1" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(1024, 540)
+texture = ExtResource("3_j4mcm")
+
+[node name="Books2" type="Sprite2D" parent="TextureRect2" index="7"]
+position = Vector2(832, 636)
+texture = ExtResource("4_yboit")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("5_iv4yh")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Neon"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "fun."

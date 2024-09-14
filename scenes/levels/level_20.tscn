@@ -1,9 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://d24jbp7bv455d"]
+[gd_scene load_steps=5 format=3 uid="uid://d24jbp7bv455d"]
 
 [ext_resource type="PackedScene" uid="uid://b1ogp3qb28vgo" path="res://scenes/levels/level_18.tscn" id="1_wvato"]
+[ext_resource type="Script" path="res://scripts/levels/level_20.gd" id="2_yglgs"]
+[ext_resource type="Texture2D" uid="uid://cuh3lboeij8ux" path="res://Assets/Obstacles/Snack.png" id="3_eio1c"]
+[ext_resource type="Texture2D" uid="uid://d3avdrpme5rl3" path="res://Assets/Plumies/13.Bianka.png" id="4_7o1kq"]
 
 [node name="Level20" instance=ExtResource("1_wvato")]
+script = ExtResource("2_yglgs")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 20"
+
+[node name="Control" parent="TextureRect2" index="2"]
+offset_left = -824.0
+offset_top = -297.0
+offset_right = 725.0
+offset_bottom = 319.0
+
+[node name="Snack" type="Sprite2D" parent="TextureRect2" index="5"]
+position = Vector2(960, 703)
+texture = ExtResource("3_eio1c")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_7o1kq")
+
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "Oh look, you found another Plumie! It’s"
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Bianka"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "This Plumie believes that there’s 
+nothing better in life than drinking 
+freshly brewed green tea while 
+working hard at art and drawing."

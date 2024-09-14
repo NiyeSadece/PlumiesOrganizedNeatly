@@ -1,9 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpb6d60bwsly6"]
+[gd_scene load_steps=5 format=3 uid="uid://bpb6d60bwsly6"]
 
 [ext_resource type="PackedScene" uid="uid://d24jbp7bv455d" path="res://scenes/levels/level_20.tscn" id="1_d4ndc"]
+[ext_resource type="Script" path="res://scripts/levels/level_24.gd" id="2_6vkl3"]
+[ext_resource type="Texture2D" uid="uid://3bygfe3ee8m3" path="res://Assets/Obstacles/Pu-erh.png" id="3_cv3p3"]
+[ext_resource type="Texture2D" uid="uid://bkj702wj4r22y" path="res://Assets/Plumies/16.Sayuu.png" id="4_kqxhc"]
 
 [node name="Level24" instance=ExtResource("1_d4ndc")]
+script = ExtResource("2_6vkl3")
 
-[node name="Label" parent="." index="1"]
+[node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 24"
+
+[node name="Teacup" parent="TextureRect2" index="4"]
+visible = true
+position = Vector2(1119, 378)
+
+[node name="Snack" parent="TextureRect2" index="5"]
+visible = false
+
+[node name="Pu-erh" type="Sprite2D" parent="TextureRect2" index="6"]
+position = Vector2(833, 380)
+texture = ExtResource("3_cv3p3")
+
+[node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+texture = ExtResource("4_kqxhc")
+
+[node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+text = "Sayuu"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "While most Plumies are out and 
+about, this one spends most of his 
+time on his branch, playing video 
+games all day. No wonder why this 
+one has a very concerning sleep 
+schedule."

@@ -1,12 +1,49 @@
-[gd_scene load_steps=8 format=3 uid="uid://dplh27whcr5vj"]
+[gd_scene load_steps=15 format=3 uid="uid://dplh27whcr5vj"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="1_e4c5c"]
+[ext_resource type="Script" path="res://scripts/levels/level_01.gd" id="1_e4c5c"]
 [ext_resource type="Texture2D" uid="uid://bm38fluu3nxc7" path="res://Assets/Backgrounds/3x3.png" id="1_wci2l"]
 [ext_resource type="Texture2D" uid="uid://cvoklfx2mm0gt" path="res://Assets/Backgrounds/Background.png" id="2_f4f7d"]
 [ext_resource type="FontFile" uid="uid://et80egulo4w5" path="res://Assets/waifssk.ttf" id="4_trb3o"]
 [ext_resource type="Texture2D" uid="uid://by81lnlc142v0" path="res://Assets/Button_back.png" id="5_kuh4d"]
 [ext_resource type="Texture2D" uid="uid://deab14doaw1fl" path="res://Assets/Button_restart.png" id="6_vwjo0"]
 [ext_resource type="Texture2D" uid="uid://df8ob1ru1mbha" path="res://Assets/Button_next.png" id="7_ksb3c"]
+[ext_resource type="Texture2D" uid="uid://c0rrn4jg7raih" path="res://Assets/Backgrounds/Plumie_intro.png" id="8_s3lb7"]
+[ext_resource type="Texture2D" uid="uid://ww8b8ioqqofc" path="res://Assets/Plumies/1.Cytri.png" id="9_vo3q7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv52p"]
+bg_color = Color(0.92549, 0.901961, 0.854902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7o0vc"]
+bg_color = Color(0.92549, 0.901961, 0.854902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o4qe"]
+bg_color = Color(0.92549, 0.901961, 0.854902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wkh3"]
+bg_color = Color(0.92549, 0.901961, 0.854902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqhy0"]
+bg_color = Color(0.92549, 0.901961, 0.854902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -39,12 +76,20 @@ grow_vertical = 2
 texture = ExtResource("1_wci2l")
 
 [node name="GridContainer" type="GridContainer" parent="TextureRect2/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
-columns = 7
 
 [node name="Label" type="Label" parent="TextureRect2"]
 layout_mode = 1
@@ -83,12 +128,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -360.0
+offset_left = -702.0
 offset_top = -253.0
-offset_right = 402.0
+offset_right = 702.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 60
+theme_override_constants/separation = 400
 
 [node name="Back" type="Button" parent="TextureRect2/HBoxContainer"]
 layout_mode = 2
@@ -106,5 +151,106 @@ layout_mode = 2
 icon = ExtResource("7_ksb3c")
 flat = true
 
+[node name="Popup" type="Control" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -360.0
+offset_right = 540.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/Popup"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_s3lb7")
+
+[node name="Control" type="Control" parent="TextureRect2/Popup/TextureRect"]
+anchors_preset = 0
+offset_left = 141.0
+offset_top = 127.0
+offset_right = 495.0
+offset_bottom = 591.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/Popup/TextureRect/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -96.0
+offset_right = 32.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_vo3q7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2/Popup/TextureRect"]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 134.0
+offset_right = 952.0
+offset_bottom = 512.0
+
+[node name="Label" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
+theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_font_sizes/font_size = 25
+text = "Oh look, you found another Plumie! It's"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
+theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_font_sizes/font_size = 50
+text = "Cytri"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
+theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_font_sizes/font_size = 29
+text = "With a warm welcome, she always 
+makes sure each and every one 
+feels right at home, not even her 
+lemons can sour the mood."
+horizontal_alignment = 1
+uppercase = true
+
+[node name="PopupButton" type="Button" parent="TextureRect2/Popup/TextureRect"]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 521.0
+offset_right = 831.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(0.298039, 0.203922, 0.164706, 1)
+theme_override_colors/font_pressed_color = Color(0.298039, 0.203922, 0.164706, 1)
+theme_override_colors/font_hover_color = Color(0.298039, 0.203922, 0.164706, 1)
+theme_override_colors/font_focus_color = Color(0.298039, 0.203922, 0.164706, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.298039, 0.203922, 0.164706, 1)
+theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xv52p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7o0vc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2o4qe")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2wkh3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cqhy0")
+text = "OK"
+
 [connection signal="pressed" from="TextureRect2/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TextureRect2/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="TextureRect2/HBoxContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="hidden" from="TextureRect2/Popup" to="." method="_on_popup_hidden"]
+[connection signal="pressed" from="TextureRect2/Popup/TextureRect/PopupButton" to="." method="_on_popup_button_pressed"]
