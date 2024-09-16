@@ -11,6 +11,7 @@ var item_held = null
 var current_slot = null
 var can_place := false
 var icon_anchor : Vector2
+var original_position : Vector2 = Vector2.ZERO
 
 # List of predefined shapes to spawn
 var shape_list = [1, 3, 5, 6, 8, 11]  # Replace with your shape identifiers
@@ -128,33 +129,31 @@ func rotate_item():
 		_on_slot_mouse_entered(current_slot)
 
 func place_item():
-	if is_mouse_outside_grid():
-		# If the mouse is outside the grid, place the item freely
-		item_held.global_position = get_global_mouse_position()
-		item_held.get_parent().remove_child(item_held)
-		add_child(item_held)
-		
-		# Reset item anchor and grids, as it's no longer on the grid
-		item_held.grid_anchor = null
+	if is_mouse_outside_grid() or not can_place:
+		item_held.position = original_position
+		item_held.selected = false
 		item_held = null
 		clear_grid()
+
+		return
 	else:
 		var calculated_grid_id = current_slot.slot_ID + icon_anchor.x * col_count + icon_anchor.y
 		item_held._snap_to(grid_array[calculated_grid_id].global_position)
-	
+
 		item_held.get_parent().remove_child(item_held)
 		grid_container.add_child(item_held)
 		item_held.global_position = get_global_mouse_position()
-	
+
 		item_held.grid_anchor = current_slot
 		for grid in item_held.item_grids:
 			var grid_to_check = current_slot.slot_ID + grid[0] + grid[1] * col_count
 			grid_array[grid_to_check].state = grid_array[grid_to_check].States.TAKEN
 			grid_array[grid_to_check].item_stored = item_held
-		
+
+		item_held.selected = false 
 		item_held = null
 		clear_grid()
-	
+
 	if check_if_puzzle_solved():
 		print("Puzzle Completed!")
 		$TextureRect2/HBoxContainer/Next.visible = true
@@ -174,31 +173,31 @@ func is_mouse_outside_grid() -> bool:
 func pick_item():
 	if item_held:
 		return
-		
+
 	var item_to_pick = get_item_under_mouse()
 	if item_to_pick:
+		
 		item_held = item_to_pick
+		original_position = item_held.position
 		item_held.selected = true
 		add_child(item_held)
 		item_held.global_position = get_global_mouse_position()
 		return
-		
+
 	if current_slot and current_slot.item_stored:
-		# Detach the item from the current slot
 		item_held = current_slot.item_stored
+		original_position = item_held.position
 		item_held.selected = true
-		
-		# Remove item from the grid and reset the slot
+
 		for grid in item_held.item_grids:
 			var grid_to_check = item_held.grid_anchor.slot_ID + grid[0] + grid[1] * col_count
 			grid_array[grid_to_check].state = grid_array[grid_to_check].States.FREE
 			grid_array[grid_to_check].item_stored = null
-		
+
 		item_held.get_parent().remove_child(item_held)
 		add_child(item_held)
 		item_held.global_position = get_global_mouse_position()
 
-		# Reset the slot anchor
 		item_held.grid_anchor = null
 
 	

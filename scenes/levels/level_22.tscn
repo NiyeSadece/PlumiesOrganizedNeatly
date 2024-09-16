@@ -23,8 +23,5 @@ texture = ExtResource("4_k585w")
 text = "Joy"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "She thinks she has power over 
-yarn, but the yarn overpowers her 
-more often than not. Troublesome 
-yarn can't stop this Plumie from 
-having fun."
+theme_override_font_sizes/font_size = 29
+text = "She thinks she has power over yarn, but the yarn overpowers her more often than not. Troublesome yarn can't stop this Plumie from having fun."

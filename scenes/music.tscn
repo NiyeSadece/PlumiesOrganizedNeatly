@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3xy6k6bcafh6"]
+
+[ext_resource type="AudioStream" uid="uid://o07klkcl8ei8" path="res://Assets/ひまな時間.mp3" id="1_bcm8s"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_bcm8s")
+autoplay = true

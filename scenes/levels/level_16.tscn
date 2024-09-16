@@ -18,7 +18,5 @@ texture = ExtResource("3_ocvrg")
 text = "Miri"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Be it art or witty puns, this little 
-mage is always on top of her 
-game, constantly surprising 
-everyone with a new masterpiece."
+theme_override_font_sizes/font_size = 29
+text = "Be it art or witty puns, this little mage is always on top of her game, constantly surprising everyone with a new masterpiece."

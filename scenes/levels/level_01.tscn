@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dplh27whcr5vj"]
+[gd_scene load_steps=16 format=3 uid="uid://dplh27whcr5vj"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_01.gd" id="1_e4c5c"]
 [ext_resource type="Texture2D" uid="uid://bm38fluu3nxc7" path="res://Assets/Backgrounds/3x3.png" id="1_wci2l"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://df8ob1ru1mbha" path="res://Assets/Button_next.png" id="7_ksb3c"]
 [ext_resource type="Texture2D" uid="uid://c0rrn4jg7raih" path="res://Assets/Backgrounds/Plumie_intro.png" id="8_s3lb7"]
 [ext_resource type="Texture2D" uid="uid://ww8b8ioqqofc" path="res://Assets/Plumies/1.Cytri.png" id="9_vo3q7"]
+[ext_resource type="FontFile" uid="uid://be4cnic8nu02l" path="res://Assets/VALDEN.OTF" id="10_tlude"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xv52p"]
 bg_color = Color(0.92549, 0.901961, 0.854902, 1)
@@ -166,6 +167,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect2/Popup"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("8_s3lb7")
@@ -198,12 +200,13 @@ offset_left = 514.0
 offset_top = 134.0
 offset_right = 952.0
 offset_bottom = 512.0
+theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_trb3o")
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("10_tlude")
+theme_override_font_sizes/font_size = 20
 text = "Oh look, you found another Plumie! It's"
 horizontal_alignment = 1
 uppercase = true
@@ -211,7 +214,7 @@ uppercase = true
 [node name="Label2" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_fonts/font = ExtResource("10_tlude")
 theme_override_font_sizes/font_size = 50
 text = "Cytri"
 horizontal_alignment = 1
@@ -220,11 +223,12 @@ uppercase = true
 [node name="Label3" type="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
-theme_override_fonts/font = ExtResource("4_trb3o")
+theme_override_fonts/font = ExtResource("10_tlude")
 theme_override_font_sizes/font_size = 29
-text = "With a warm welcome, she always 
-makes sure each and every one 
-feels right at home, not even her 
+text = "With a warm welcome, she 
+always makes sure each 
+and every one feels right 
+at home, not even her 
 lemons can sour the mood."
 horizontal_alignment = 1
 uppercase = true

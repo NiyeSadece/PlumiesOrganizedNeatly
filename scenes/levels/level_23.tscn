@@ -26,8 +26,4 @@ texture = ExtResource("4_33xpt")
 text = "Maaxter"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Looks like he brought some friends 
-along to play cards, he likes playing 
-casually but also likes to put on a 
-show if he thinks he’s ready to win, 
-things are getting heated!"
+text = "Looks like he brought some friends along to play cards, he likes playing casually but also likes to put on a show if he thinks he's ready to win, things are getting heated!"

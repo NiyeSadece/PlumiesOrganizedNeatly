@@ -29,7 +29,5 @@ texture = ExtResource("4_xsqpv")
 text = "Oma"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Manifesting fishies that fight for 
-their lives, manifesting fishies that 
-fight for their lives, manifesting 
-fishies that fight for their-... :D"
+theme_override_font_sizes/font_size = 29
+text = "Manifesting fishies that fight for their lives, manifesting fishies that fight for their lives, manifesting fishies that fight for their-... :D"

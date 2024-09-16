@@ -1,17 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkxot50srp8ue"]
+[gd_scene load_steps=12 format=3 uid="uid://bkxot50srp8ue"]
 
 [ext_resource type="PackedScene" uid="uid://wwhdm53odg7c" path="res://scenes/levels/level_32.tscn" id="1_xq1yr"]
 [ext_resource type="Script" path="res://scripts/levels/level_33.gd" id="2_00wja"]
 [ext_resource type="Texture2D" uid="uid://b0tw1qgw8v23q" path="res://Assets/Obstacles/Final level 33/Balloons.png" id="3_dm3mw"]
+[ext_resource type="Texture2D" uid="uid://pkqfksxga66s" path="res://Assets/Backgrounds/8x8.png" id="3_ir3om"]
 [ext_resource type="Texture2D" uid="uid://j01fm80c2pbp" path="res://Assets/Obstacles/Final level 33/Cake.png" id="4_qqxvp"]
 [ext_resource type="Texture2D" uid="uid://bm587tw7kdt6o" path="res://Assets/Obstacles/Final level 33/Flags.png" id="5_x0mis"]
 [ext_resource type="Texture2D" uid="uid://d2ardkovddcvm" path="res://Assets/Obstacles/Final level 33/Gift2.png" id="6_qexe2"]
 [ext_resource type="Texture2D" uid="uid://dcr1comec8e70" path="res://Assets/Obstacles/Final level 33/Gift.png" id="7_1thwk"]
 [ext_resource type="Texture2D" uid="uid://cokveotto85st" path="res://Assets/Obstacles/Final level 33/Tulips.png" id="8_e53rw"]
 [ext_resource type="Texture2D" uid="uid://bmjl1xtirptsp" path="res://Assets/Plumies/21.Harrier.png" id="9_76tuj"]
+[ext_resource type="FontFile" uid="uid://be4cnic8nu02l" path="res://Assets/VALDEN.OTF" id="11_nusgt"]
 
 [node name="Level30" instance=ExtResource("1_xq1yr")]
 script = ExtResource("2_00wja")
+
+[node name="TextureRect" parent="TextureRect2" index="0"]
+texture = ExtResource("3_ir3om")
+
+[node name="GridContainer" parent="TextureRect2/TextureRect" index="0"]
+columns = 8
 
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
@@ -51,13 +59,16 @@ texture = ExtResource("8_e53rw")
 texture = ExtResource("9_76tuj")
 
 [node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
-text = "Oh look, you found the last Plumie! It’s"
+theme_override_fonts/font = ExtResource("11_nusgt")
+theme_override_font_sizes/font_size = 19
+text = "Oh look, you found the last Plumie! It's"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+theme_override_fonts/font = ExtResource("11_nusgt")
 text = "Harrier"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "This Plumie lives in creative chaos, 
-rushing between so many projects 
-she can't remember what kind of 
-bird she's supposed to be."
+layout_mode = 2
+theme_override_fonts/font = ExtResource("11_nusgt")
+text = "This Plumie lives in creative chaos, rushing between so many projects she can't remember what kind of bird she's supposed to be."
+autowrap_mode = 2

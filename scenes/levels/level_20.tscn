@@ -26,13 +26,10 @@ texture = ExtResource("3_eio1c")
 texture = ExtResource("4_7o1kq")
 
 [node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
-text = "Oh look, you found another Plumie! It’s"
+text = "Oh look, you found another Plumie! It's"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
 text = "Bianka"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "This Plumie believes that there’s 
-nothing better in life than drinking 
-freshly brewed green tea while 
-working hard at art and drawing."
+text = "This Plumie believes that there's nothing better in life than drinking freshly brewed green tea while working hard at art and drawing."

@@ -32,3 +32,4 @@ text = "Neon"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
 text = "fun."
+autowrap_mode = 0

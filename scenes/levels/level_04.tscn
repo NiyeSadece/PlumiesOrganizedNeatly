@@ -23,14 +23,16 @@ texture = ExtResource("4_chpxo")
 stretch_mode = 3
 
 [node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
-text = "Oh, what’s this? It’s the"
+text = "Oh, what’s this? It's the"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
 text = "VOD gang"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "You may not notice them right away, 
-but they always have supported Vil 
-through all his endeavours. Even 
-when they’re hard to spot, they’re 
-still one of the Plumies."
+text = "You may not notice them 
+right away, but they always 
+have supported Vil through 
+all his endeavours. Even 
+when they're hard to spot, 
+they're still one of the 
+Plumies."

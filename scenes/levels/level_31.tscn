@@ -41,5 +41,12 @@ visible = true
 [node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
 texture = ExtResource("7_c5do3")
 
+[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
+text = "Oh look, you found another Plumie! It's"
+
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
 text = "Crazy Mike"
+
+[node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
+text = "while."
+autowrap_mode = 2

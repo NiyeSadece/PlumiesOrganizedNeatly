@@ -47,4 +47,5 @@ texture = ExtResource("7_g1d45")
 text = "Nanni"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = " glasses."
+text = "She communicates mainly with emotes, but don't let her shyness fool you! She'll try to teach you Spanish if given the chance. So grab 
+a drink, she'll be at it for a while."
