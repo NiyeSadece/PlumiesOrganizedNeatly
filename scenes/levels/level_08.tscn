@@ -31,10 +31,4 @@ texture = ExtResource("4_b1213")
 text = "Lysander"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "He is often found wandering 
-around, taking pictures of the 
-other Plumies doing their 
-favourite activities. He finds 
-it important to immortalise 
-everyone and treasures 
-every take."
+text = "He is often found wandering around, taking pictures of the other Plumies doing their favourite activities. He finds it important to immortalise everyone and treasures every take."

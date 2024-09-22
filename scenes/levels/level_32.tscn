@@ -37,24 +37,16 @@ texture = ExtResource("3_jm26q")
 position = Vector2(1120, 734)
 texture = ExtResource("4_2scb3")
 
-[node name="Popup" parent="TextureRect2" index="13"]
-layout_mode = 1
-offset_left = -540.0
-offset_top = -360.0
-offset_right = 540.0
-offset_bottom = 360.0
-
 [node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
+layout_mode = 1
 texture = ExtResource("5_54vka")
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
+theme_override_font_sizes/font_size = 50
 text = "Lex"
+autowrap_mode = 0
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
 theme_override_font_sizes/font_size = 29
-text = "This Plumie sings his 
-lungs out, he can often 
-be found doing karaokes with his fellow 
-Plumies."
-
-[connection signal="hidden" from="TextureRect2/Popup" to="." method="_on_popup_hidden"]
+text = "This Plumie loves singing his lungs out. He can often be found doing karaokes with the rest 
+of the forest."

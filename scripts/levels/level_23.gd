@@ -5,7 +5,7 @@ extends Control
 @onready var grid_container = $TextureRect2/TextureRect/GridContainer
 @onready var item_scene = preload("res://scenes/item.tscn")
 @onready var col_count = grid_container.columns
-
+@onready var popup = $TextureRect2/Popup
 var grid_array := []
 var item_held = null
 var current_slot = null
@@ -26,7 +26,11 @@ func _ready():
 			create_empty_slot()
 		else:
 			create_slot()
-
+	if !Global.popup23:
+		popup.visible = true
+	else:
+		_on_popup_hidden()
+		
 func _on_popup_hidden():
 	var item_spawn_positions := [
 		Vector2(1500, 300),
@@ -218,6 +222,8 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/level_selector.tscn")
 
 func _on_restart_pressed():
+	if not Global.popup23:
+		Global.popup23 = true
 	get_tree().change_scene_to_file("res://scenes/levels/level_23.tscn")
 
 func _on_next_pressed():

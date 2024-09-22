@@ -32,5 +32,4 @@ text = "Momo"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
 theme_override_font_sizes/font_size = 28
-text = "She pops up anywhere and everywhere when you least expect it. If given the chance, she'll talk your feathers off about glasses, maybe even bribe you into wearing them for her own enjoyment and spreading the wisdom of glasses."
-autowrap_mode = 2
+text = "She pops up anywhere and everywhere, when you least expect it. If given the chance, she'll talk your feathers off about glasses, maybe even bribe you into wearing them for her own enjoyment and spreading their wisdom."

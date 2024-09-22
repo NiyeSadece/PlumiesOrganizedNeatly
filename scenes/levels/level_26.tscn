@@ -31,5 +31,4 @@ texture = ExtResource("5_iv4yh")
 text = "Neon"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "fun."
-autowrap_mode = 0
+text = "Always the first one in the Plumie cuddle pile to get as much love as possible. That's why her dreams are always warm and cosy."

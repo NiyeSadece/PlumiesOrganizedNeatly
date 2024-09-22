@@ -21,10 +21,5 @@ texture = ExtResource("3_s5q4n")
 text = " Oktavia"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Oktavia is your go-to 
-Plumie when you're 
-playing Stardew Valley. 
-They know all the loops 
-and rules around making 
-your way around Pelican 
-Town!"
+text = "Oktavia is your go-to Plumie when you’re playing Stardew Valley. They know all the loops and rules about making your way around Pelican Town!
+"

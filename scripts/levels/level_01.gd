@@ -12,6 +12,7 @@ var current_slot = null
 var can_place := false
 var icon_anchor : Vector2
 var original_position : Vector2 = Vector2.ZERO
+var popup_shown := false
 
 # List of predefined shapes to spawn
 var shape_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # Replace with your shape identifiers
@@ -22,12 +23,16 @@ func _ready():
 	# Create slots
 	for i in range(3):
 		create_slot()
+	if !Global.popup1:
+		popup.visible = true
+	else:
+		_on_popup_hidden()
+	
 	
 func _on_popup_hidden():
 	var item_spawn_positions := [
 		Vector2(1500, 500),
 	]
-	
 	for i in range(item_spawn_positions.size()):
 		var new_item = item_scene.instantiate()
 		add_child(new_item)
@@ -212,8 +217,10 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/level_selector.tscn")
 
 func _on_restart_pressed():
+	if not Global.popup1:
+		Global.popup1 = true
 	get_tree().change_scene_to_file("res://scenes/levels/level_01.tscn")
-
+	
 func _on_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_02.tscn")
 

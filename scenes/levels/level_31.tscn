@@ -23,7 +23,7 @@ text = "
 LEVEL 31"
 
 [node name="Books1" type="Sprite2D" parent="TextureRect2" index="8"]
-position = Vector2(864, 315)
+position = Vector2(928, 315)
 texture = ExtResource("4_6dm3b")
 
 [node name="Books2" type="Sprite2D" parent="TextureRect2" index="9"]
@@ -35,18 +35,11 @@ position = Vector2(737, 411)
 rotation = -1.5708
 texture = ExtResource("6_xm3qf")
 
-[node name="Popup" parent="TextureRect2" index="11"]
-visible = true
-
 [node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
 texture = ExtResource("7_c5do3")
-
-[node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
-text = "Oh look, you found another Plumie! It's"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
 text = "Crazy Mike"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "while."
-autowrap_mode = 2
+text = "This Plumie really likes space but will sometimes get lost in the stars. It's hard to fly in zero gravity so he tries to spin since it's a cool trick."

@@ -17,9 +17,6 @@ offset_top = -308.0
 offset_right = 774.5
 offset_bottom = 308.0
 
-[node name="Popup" parent="TextureRect2" index="5"]
-visible = true
-
 [node name="TextureRect" parent="TextureRect2/Popup/TextureRect/Control" index="0"]
 texture = ExtResource("3_juxqt")
 
@@ -31,8 +28,7 @@ text = "Maizy and Ember"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
 theme_override_font_sizes/font_size = 29
-text = "One likes dad jokes a bit too much, the other is just tired of them. Both are excellent yappers tho! Maybe they can come to 
-a truce over some food Maizy cooked."
+text = "One likes dad jokes a bit too much, the other is just tired of them. Both are excellent yappers though! Maybe they can come to a truce over some food Maizy cooked."
 
 [node name="Gemstone" parent="." index="1"]
 position = Vector2(-106, 500)

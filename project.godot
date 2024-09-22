@@ -13,13 +13,15 @@ config_version=5
 config/name="Plumies Organized Neatly"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Plumie_icon.png"
+config/windows_native_icon="res://Assets/Plumie_icon.ico"
 
 [autoload]
 
 DataHandler="*res://scripts/DataHandler.gd"
 GameManager="*res://scripts/game_manager.gd"
 Music="*res://scenes/music.tscn"
+Global="*res://scripts/global.gd"
 
 [display]
 

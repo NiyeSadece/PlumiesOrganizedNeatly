@@ -23,7 +23,7 @@ texture = ExtResource("4_quodp")
 text = "Oh look, you found another Plumie! It's"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
-text = "Flotorte"
+text = "Flo"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = " Plumies."
+text = "As the resident healer, he treats every wound Vil or the Plumies might get, no matter how small. He likes to tease his fellow Plumies and Vil, but in secret he cares deeply about them."

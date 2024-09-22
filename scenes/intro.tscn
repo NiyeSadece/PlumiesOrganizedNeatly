@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcmu8i0kmxpac"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_5nhkl"]
+[ext_resource type="Texture2D" uid="uid://cvoklfx2mm0gt" path="res://Assets/Backgrounds/Background.png" id="1_crxfg"]
+[ext_resource type="FontFile" uid="uid://be4cnic8nu02l" path="res://Assets/VALDEN.OTF" id="2_y3q0j"]
+[ext_resource type="Texture2D" uid="uid://df8ob1ru1mbha" path="res://Assets/Button_next.png" id="3_i4gqs"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_5nhkl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_crxfg")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = -264.0
+offset_right = 507.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.290196, 0.196078, 0.156863, 1)
+theme_override_fonts/font = ExtResource("2_y3q0j")
+theme_override_font_sizes/font_size = 34
+text = "It is a brand new day, the sun shines brightly up in the sky with no rain in sight. To most people, it seems like just your regular run-of-the-mill day. Just another one of your typical Tuesdays. But to Vilhelm it's a special one, cause today is his birthday!
+
+As he gets up from his bed and heads towards the main hall, he sees his Plumies already hard at work. They're decorating the mansion for his birthday party it seems. But something feels off... There's just way too many Plumies fluttering about, and the place is a mess! 
+
+Books, brooches and art utensils are scattered around, most of the Plumies are doing their own thing and there's feathers everywhere!
+
+With a sigh, Vil tightens his hair ribbon, pushes up his sleeves and gets to work. It looks like he has to get things in order before the party can start!
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Next" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -249.0
+offset_top = -287.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("3_i4gqs")
+flat = true
+
+[connection signal="pressed" from="TextureRect/Next" to="." method="_on_next_pressed"]

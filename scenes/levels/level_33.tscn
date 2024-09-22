@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkxot50srp8ue"]
+[gd_scene load_steps=11 format=3 uid="uid://bkxot50srp8ue"]
 
 [ext_resource type="PackedScene" uid="uid://wwhdm53odg7c" path="res://scenes/levels/level_32.tscn" id="1_xq1yr"]
 [ext_resource type="Script" path="res://scripts/levels/level_33.gd" id="2_00wja"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dcr1comec8e70" path="res://Assets/Obstacles/Final level 33/Gift.png" id="7_1thwk"]
 [ext_resource type="Texture2D" uid="uid://cokveotto85st" path="res://Assets/Obstacles/Final level 33/Tulips.png" id="8_e53rw"]
 [ext_resource type="Texture2D" uid="uid://bmjl1xtirptsp" path="res://Assets/Plumies/21.Harrier.png" id="9_76tuj"]
-[ext_resource type="FontFile" uid="uid://be4cnic8nu02l" path="res://Assets/VALDEN.OTF" id="11_nusgt"]
 
 [node name="Level30" instance=ExtResource("1_xq1yr")]
 script = ExtResource("2_00wja")
@@ -24,6 +23,9 @@ columns = 8
 [node name="Label" parent="TextureRect2" index="1"]
 text = "
 LEVEL 33"
+
+[node name="Books1" parent="TextureRect2" index="8"]
+position = Vector2(864, 315)
 
 [node name="Pin" parent="TextureRect2" index="11"]
 visible = false
@@ -59,16 +61,11 @@ texture = ExtResource("8_e53rw")
 texture = ExtResource("9_76tuj")
 
 [node name="Label" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="0"]
-theme_override_fonts/font = ExtResource("11_nusgt")
 theme_override_font_sizes/font_size = 19
 text = "Oh look, you found the last Plumie! It's"
 
 [node name="Label2" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="1"]
-theme_override_fonts/font = ExtResource("11_nusgt")
 text = "Harrier"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("11_nusgt")
 text = "This Plumie lives in creative chaos, rushing between so many projects she can't remember what kind of bird she's supposed to be."
-autowrap_mode = 2

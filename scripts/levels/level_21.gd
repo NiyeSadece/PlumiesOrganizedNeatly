@@ -32,7 +32,7 @@ func _ready():
 		Vector2(500, 300),
 		Vector2(1500, 600),
 		Vector2(500, 600),
-		Vector2(1500, 800),
+		Vector2(1700, 600),
 	]
 	
 	for i in shape_list:

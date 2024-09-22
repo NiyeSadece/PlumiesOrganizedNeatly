@@ -31,6 +31,4 @@ texture = ExtResource("4_sy1gt")
 text = "Natsu"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Unable to keep her hands still, the resident shapeshifter is always fiddling with something, 
-be it a new bracelet, 
-a wig or some other cosplay-related crafting."
+text = "Unable to keep her hands still, the resident shapeshifter is always fiddling with something, be it a new bracelet, a wig or some other cosplay-related crafting."

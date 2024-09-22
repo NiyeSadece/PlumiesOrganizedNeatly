@@ -40,4 +40,4 @@ texture = ExtResource("5_ld0ap")
 text = "Niye"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "Colors that don't mind double dates but have to stay with the same color, Puzzles where you follow the tone of sound effects, and even coding Plumies Organized Neatly, this Plumie's got it all!"
+text = "Colours that don't mind double dates but want to stay monogamous, Puzzles where you follow the tone of sound effects... and even coding Plumies Organized Neatly! This Plumie got the knowhow!"

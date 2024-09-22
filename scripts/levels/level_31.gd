@@ -5,7 +5,7 @@ extends Control
 @onready var grid_container = $TextureRect2/TextureRect/GridContainer
 @onready var item_scene = preload("res://scenes/item.tscn")
 @onready var col_count = grid_container.columns
-
+@onready var popup = $TextureRect2/Popup
 var grid_array := []
 var item_held = null
 var current_slot = null
@@ -16,7 +16,7 @@ var original_position : Vector2 = Vector2.ZERO
 # List of predefined shapes to spawn
 var shape_list = [1, 9, 10, 11, 18, 13, 15, 16, 18, 19]  # Replace with your shape identifiers
 var shape_index = 0  # Track the current index of the shape to spawn
-var empty_spots = [0, 1, 2, 8, 16, 23, 31, 39, 48, 55, 56, 63]
+var empty_spots = [0, 1, 3, 8, 16, 23, 31, 39, 48, 55, 56, 63]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,7 +26,11 @@ func _ready():
 			create_empty_slot()
 		else:
 			create_slot()
-
+	if !Global.popup31:
+		popup.visible = true
+	else:
+		_on_popup_hidden()
+		
 func _on_popup_hidden():
 	$TextureRect2/TextureRect.visible = true
 	var item_spawn_positions := [
@@ -223,6 +227,8 @@ func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/level_selector.tscn")
 
 func _on_restart_pressed():
+	if not Global.popup31:
+		Global.popup31 = true
 	get_tree().change_scene_to_file("res://scenes/levels/level_31.tscn")
 
 func _on_next_pressed():

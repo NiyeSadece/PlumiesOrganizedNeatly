@@ -33,7 +33,7 @@ func _ready():
 		Vector2(1500, 600),
 		Vector2(500, 600),
 		Vector2(1500, 800),
-		Vector2(500, 800),
+		Vector2(300, 600),
 		Vector2(1700, 300),
 	]
 	

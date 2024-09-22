@@ -153,6 +153,7 @@ icon = ExtResource("7_ksb3c")
 flat = true
 
 [node name="Popup" type="Control" parent="TextureRect2"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -225,12 +226,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.34902, 0.254902, 0.215686, 1)
 theme_override_fonts/font = ExtResource("10_tlude")
 theme_override_font_sizes/font_size = 29
-text = "With a warm welcome, she 
-always makes sure each 
-and every one feels right 
-at home, not even her 
-lemons can sour the mood."
+text = "With a warm welcome, she always makes sure each and every one feels right at home. Not even her lemons can sour the mood."
 horizontal_alignment = 1
+autowrap_mode = 2
 uppercase = true
 
 [node name="PopupButton" type="Button" parent="TextureRect2/Popup/TextureRect"]

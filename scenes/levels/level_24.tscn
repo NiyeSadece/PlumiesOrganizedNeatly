@@ -30,9 +30,4 @@ texture = ExtResource("4_kqxhc")
 text = "Sayuu"
 
 [node name="Label3" parent="TextureRect2/Popup/TextureRect/VBoxContainer" index="2"]
-text = "While most Plumies are out and 
-about, this one spends most of his 
-time on his branch, playing video 
-games all day. No wonder why this 
-one has a very concerning sleep 
-schedule."
+text = "While most Plumies are out and about, this one spends most of his time on his branch, playing video games all day. No wonder why this one has a very concerning sleep schedule."

@@ -30,10 +30,10 @@ func _ready():
 	var item_spawn_positions := [
 		Vector2(1500, 300),
 		Vector2(500, 300),
-		Vector2(1500, 600),
+		Vector2(1500, 500),
 		Vector2(500, 600),
 		Vector2(1500, 800),
-		Vector2(500, 800),
+		Vector2(300, 600),
 		Vector2(1700, 300),
 		Vector2(1700, 600),
 		Vector2(1700, 800),
